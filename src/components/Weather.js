@@ -3,7 +3,7 @@ import React from 'react';
 // stateless functional components
 // output only - no need for extending React.Component
 // if only returning single element (div) can explicitly return
-const Weather = props =>(
+const Weather = props => (
   <div>
     { props.city && props.country && <p>Location: { props.city}, { props.country}</p>}
     { props.temperature && <p>Temperature: { props.temperature}</p>}
