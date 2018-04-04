@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  weather-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: weather-app
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
+    ports:
+      - '3020:3000'
+    environment:
+      - NODE_ENV=local
